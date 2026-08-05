@@ -1736,7 +1736,7 @@ function Support() {
         </Reveal>
         <Reveal delay={400}>
           <div className="mt-12 flex flex-wrap items-center justify-center gap-5">
-            <GoldButton href="#">✨ Apoyar Valesthia </GoldButton>
+            <GoldButton href="https://www.paypal.com/donate/?hosted_button_id=QHRKGHM2532KW">✨ Apoyar Valesthia </GoldButton>
           </div>
         </Reveal>
       </div>
