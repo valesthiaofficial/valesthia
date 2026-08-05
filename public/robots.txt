@@ -1,0 +1,9 @@
+User-agent: *
+
+Allow: /
+
+Disallow:
+
+Host: https://www.valesthia.com
+
+Sitemap: https://www.valesthia.com/sitemap.xml
