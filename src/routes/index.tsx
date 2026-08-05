@@ -72,7 +72,7 @@ head: () => ({
 
     {
       rel: "manifest",
-      href: "/site.webmanifest",
+      href: "/webmanifest",
     },
 
     {
