@@ -12,269 +12,125 @@ const BUY_URL = "https://www.amazon.es/dp/B0HCX12D31";
 const AMAZON_URL = "https://www.amazon.es/dp/B0HCX12D31";
 
 export const Route = createFileRoute("/")({
-head: () => ({
-  links: [
-    {
-      rel: "canonical",
-      href: "https://www.valesthia.com/",
-    },
+  head: () => ({
+    links: [
+      {
+        rel: "canonical",
+        href: "https://www.valesthia.com/",
+      },
 
-    {
-      rel: "icon",
-      href: "/favicon.ico",
-      type: "image/x-icon",
-    },
+      {
+        rel: "icon",
+        href: "/favicon.ico",
+        type: "image/x-icon",
+      },
 
-    {
-      rel: "shortcut icon",
-      href: "/favicon.ico",
-    },
+      {
+        rel: "shortcut icon",
+        href: "/favicon.ico",
+      },
 
-    {
-      rel: "icon",
-      type: "image/png",
-      sizes: "16x16",
-      href: "/favicon-16x16.png",
-    },
+      {
+        rel: "apple-touch-icon",
+        href: "/apple-touch-icon.png",
+      },
 
-    {
-      rel: "icon",
-      type: "image/png",
-      sizes: "32x32",
-      href: "/favicon-32x32.png",
-    },
+      {
+        rel: "preconnect",
+        href: "https://fonts.googleapis.com",
+      },
 
-    {
-      rel: "icon",
-      type: "image/png",
-      sizes: "48x48",
-      href: "/favicon-48x48.png",
-    },
+      {
+        rel: "preconnect",
+        href: "https://fonts.gstatic.com",
+        crossOrigin: "anonymous",
+      },
+    ],
 
-    {
-      rel: "icon",
-      type: "image/png",
-      sizes: "96x96",
-      href: "/favicon-96x96.png",
-    },
+    meta: [
+      {
+        title:
+          "Valesthia – La luz que duerme | Novela de Fantasía Épica de Samuel Rodríguez Alleres",
+      },
 
-    {
-      rel: "icon",
-      type: "image/png",
-      sizes: "192x192",
-      href: "/favicon-192x192.png",
-    },
+      {
+        name: "description",
+        content:
+          "Descubre Valesthia, una novela de fantasía épica donde la magia, la política y los secretos antiguos decidirán el destino de un continente.",
+      },
 
-    {
-      rel: "apple-touch-icon",
-      href: "/apple-touch-icon.png",
-    },
+      {
+        name: "author",
+        content: "Samuel Rodríguez Alleres",
+      },
 
-    {
-      rel: "manifest",
-      href: "/webmanifest",
-    },
+      {
+        name: "theme-color",
+        content: "#090909",
+      },
 
-    {
-      rel: "preconnect",
-      href: "https://fonts.googleapis.com",
-    },
+      {
+        name: "robots",
+        content:
+          "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
+      },
 
-    {
-      rel: "preconnect",
-      href: "https://fonts.gstatic.com",
-      crossOrigin: "anonymous",
-    },
+      {
+        property: "og:locale",
+        content: "es_ES",
+      },
 
-    // Cuando tengas el SVG
-    // {
-    //   rel: "mask-icon",
-    //   href: "/safari-pinned-tab.svg",
-    //   color: "#0b6cff",
-    // },
-  ],
+      {
+        property: "og:type",
+        content: "website",
+      },
 
-  meta: [
-    {
-      title:
-        "Valesthia – La luz que duerme | Novela de Fantasía Épica de Samuel Rodríguez Alleres",
-    },
+      {
+        property: "og:site_name",
+        content: "Valesthia",
+      },
 
-    {
-      name: "description",
-      content:
-        "Descubre Valesthia, una novela de fantasía épica donde la magia, la política y los secretos antiguos decidirán el destino de un continente.",
-    },
+      {
+        property: "og:url",
+        content: "https://www.valesthia.com/",
+      },
 
-    {
-      name: "author",
-      content: "Samuel Rodríguez Alleres",
-    },
+      {
+        property: "og:title",
+        content: "Valesthia – La luz que duerme",
+      },
 
-    {
-      name: "creator",
-      content: "Samuel Rodríguez Alleres",
-    },
+      {
+        property: "og:description",
+        content:
+          "Una novela de fantasía épica donde la magia, la política y los secretos antiguos decidirán el destino de un continente.",
+      },
 
-    {
-      name: "publisher",
-      content: "Samuel Rodríguez Alleres",
-    },
+      {
+        property: "og:image",
+        content: "https://www.valesthia.com/img/portadaValesthia.png",
+      },
 
-    {
-      name: "copyright",
-      content: "© Samuel Rodríguez Alleres",
-    },
+      {
+        name: "twitter:card",
+        content: "summary_large_image",
+      },
 
-    {
-      name: "application-name",
-      content: "Valesthia",
-    },
+      {
+        name: "twitter:title",
+        content: "Valesthia – La luz que duerme",
+      },
 
-    {
-      name: "apple-mobile-web-app-title",
-      content: "Valesthia",
-    },
+      {
+        name: "twitter:description",
+        content: "Una novela de fantasía épica de Samuel Rodríguez Alleres.",
+      },
 
-    {
-      name: "apple-mobile-web-app-capable",
-      content: "yes",
-    },
-
-    {
-      name: "apple-mobile-web-app-status-bar-style",
-      content: "black-translucent",
-    },
-
-    {
-      name: "theme-color",
-      content: "#090909",
-    },
-
-    {
-      name: "color-scheme",
-      content: "dark",
-    },
-
-    {
-      name: "msapplication-TileColor",
-      content: "#090909",
-    },
-
-    {
-      name: "msapplication-config",
-      content: "/browserconfig.xml",
-    },
-
-    {
-      name: "robots",
-      content:
-        "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
-    },
-
-    {
-      name: "googlebot",
-      content:
-        "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1",
-    },
-
-    {
-      name: "referrer",
-      content: "strict-origin-when-cross-origin",
-    },
-
-    {
-      name: "format-detection",
-      content: "telephone=no,address=no,email=no",
-    },
-
-    {
-      property: "og:locale",
-      content: "es_ES",
-    },
-
-    {
-      property: "og:type",
-      content: "website",
-    },
-
-    {
-      property: "og:site_name",
-      content: "Valesthia",
-    },
-
-    {
-      property: "og:url",
-      content: "https://www.valesthia.com/",
-    },
-
-    {
-      property: "og:title",
-      content: "Valesthia – La luz que duerme",
-    },
-
-    {
-      property: "og:description",
-      content:
-        "Una novela de fantasía épica donde la magia, la política y los secretos antiguos decidirán el destino de un continente.",
-    },
-
-    {
-      property: "og:image",
-      content: "https://www.valesthia.com/img/portadaValesthia.png",
-    },
-
-    {
-      property: "og:image:secure_url",
-      content: "https://www.valesthia.com/img/portadaValesthia.png",
-    },
-
-    {
-      property: "og:image:type",
-      content: "image/png",
-    },
-
-    {
-      property: "og:image:width",
-      content: "1200",
-    },
-
-    {
-      property: "og:image:height",
-      content: "630",
-    },
-
-    {
-      property: "og:image:alt",
-      content: "Portada oficial de Valesthia - La luz que duerme",
-    },
-
-    {
-      name: "twitter:card",
-      content: "summary_large_image",
-    },
-
-    {
-      name: "twitter:title",
-      content: "Valesthia – La luz que duerme",
-    },
-
-    {
-      name: "twitter:description",
-      content:
-        "Una novela de fantasía épica de Samuel Rodríguez Alleres.",
-    },
-
-    {
-      name: "twitter:image",
-      content: "https://www.valesthia.com/img/portadaValesthia.png",
-    },
-
-    {
-      name: "twitter:image:alt",
-      content: "Portada oficial de Valesthia",
-    },
-  ],
+      {
+        name: "twitter:image",
+        content: "https://www.valesthia.com/img/portadaValesthia.png",
+      },
+    ],
   }),
 });
 
