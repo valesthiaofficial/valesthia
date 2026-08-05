@@ -12,6 +12,7 @@ const BUY_URL = "https://www.amazon.es/dp/B0HCX12D31";
 const AMAZON_URL = "https://www.amazon.es/dp/B0HCX12D31";
 
 export const Route = createFileRoute("/")({
+  component: Landing,
   head: () => ({
     links: [
       {
